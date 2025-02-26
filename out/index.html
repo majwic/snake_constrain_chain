@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Snake Constrain Chain</title>
+    <style>
+        /* Make the body take full height of the viewport and center content */
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f0f0f0; /* Optional background color */
+        }
+
+        /* Center the canvas within the body */
+        canvas {
+            border: 1px solid black; /* Optional border for the canvas */
+        }
+    </style>
+</head>
+<body style="margin: 0px;">
+    <script type="module">
+        import init from './snake.js'
+
+        init().catch((error) => {
+            if (!error.message.startsWith("Using exceptions for control flow, don't mind me. This isn't actually an error!")) {
+                throw error;
+            }
+            console.log(error.message);
+        });
+    </script>
+</body>
+
+</html>
